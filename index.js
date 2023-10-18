@@ -1,5 +1,18 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  if (matchHandler(array, target) === true) {
+    return true;
+  } else {
+    return false;
+  }
+  function matchHandler(array, target) {
+    for (let i = 0; i < array.length; i++) {
+      for (let j = i + 1; j < array.length; j++) {
+        if (array[i] + array[j] === target) {
+          return true;
+        }
+      }
+    }
+  }
 }
 
 /* 
